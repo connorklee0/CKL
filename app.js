@@ -17,8 +17,8 @@ function moveBackground(event) {
     }
 }
 
+// Carousel Buttons
 const buttons = document.querySelectorAll(".carousel__btn")
-
 buttons.forEach(button => {
     
     button.addEventListener("click", () => {
