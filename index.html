@@ -6,7 +6,7 @@
     <title>Connor K. Lee</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href=".assets/CKL-logo-favicon.ico" />
-    <script src="./app.js"></script>
+    <script src="./app.js" defer></script>
     <script src="https://kit.fontawesome.com/534270c367.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
@@ -95,10 +95,41 @@
                       </a>
                   </div>
                 </div>
+            </div>
+
+              <!-- PHOTO CAROUSEL -->
+              <div class="carousel">
+                <button class="carousel__btn prev clickable">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="carousel__btn next clickable">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+                <ul class="carousel__images">
+                  <li class="carousel__img active">
+                    <img src="./assets/carousel/me.JPG" class="header__img" draggable="false" alt="Photo of me holding peace sign">
+                  </li>
+                  <li class="carousel__img">
+                      <img src="./assets/carousel/beach.JPG" class="header__img" draggable="false" alt="Photo of me at the beach">    
+                  </li>
+                  <li class="carousel__img">
+                       <img src="./assets/carousel/guitar.jpg" class="header__img" draggable="false" alt="Photo of me playing guitar">
+                  </li>
+                  <li class="carousel__img">
+                       <img src="./assets/carousel/jump.JPG" class="header__img" draggable="false" alt="Photo of me jumping in Singapore">
+                  </li>
+                  <li class="carousel__img">
+                       <img src="./assets/carousel/siblings.JPG" class="header__img" draggable="false" alt="Photo of me and my siblings and nephew">
+                  </li>
+                  <li class="carousel__img">
+                       <img src="./assets/carousel/swim.JPG" class="header__img" draggable="false" alt="Photo of me at Yale swim meet">
+                  </li>
+                  <li class="carousel__img">
+                       <img src="./assets/carousel/tri.JPG" class="header__img" draggable="false" alt="Photo of me competing at Tri-ing for a Cure">
+                  </li>
+                </ul>
               </div>
-            <figure class="header__img--wrapper">
-              <img src="./assets/carousel/me.JPG" class="header__img" draggable="false"
-            </figure>
+
           </header>
           <button class="mail__btn clickable" onclick="contactModal()">
             <i class="fa-solid fa-envelope"></i>

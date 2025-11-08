@@ -191,13 +191,15 @@ button {
   cursor: pointer;
 }
 
-.clickable:hover {
+.clickable:hover,
+.clickable:active {
   scale: 1.15;
 }
 
 .clickable:active {
   opacity: 0.7;
   scale: 0.9;
+  color: var(--highlight-color);
 }
 
 .link__hover-underline {
@@ -300,20 +302,6 @@ header {
   flex-direction: column;
 }
 
-.header__img--wrapper {
-  width: 400px;
-  height: auto;
-  border-radius: 50px;
-  overflow: hidden;
-  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.5);
-}
-
-.header__img {
-  width: 100%;
-  height: 100%;
-  transform: scale(1.2);
-}
-
 .header__para {
   font-size: 20px;
   line-height: 2;
@@ -344,6 +332,76 @@ header {
   font-size: 24px;
   text-decoration: none;
   color: var(--text--main-color);
+}
+
+/* Carousel */
+
+.carousel {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  display: flex;
+}
+
+.carousel__images {
+  margin: 0;
+  padding: 0;
+  list-style: none;  
+}
+
+.carousel__img {
+  position: absolute;
+  inset: 0;
+  opacity: 0; 
+  transition: opacity 500ms ease-in-out 200ms;
+}
+
+.carousel__img.active {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.header__img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  object-position: center;  
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+}
+
+.carousel__btn {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--contrast-color);
+  opacity: 0.7;
+  z-index: 100;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: var(--background--contrast-color);
+  outline: 1px solid var(--contrast-color);
+}
+
+.carousel__btn.prev {
+  left: -28px;
+}
+
+.carousel__btn.next {
+  right: -28px;
+}
+
+.carousel__btn:active {
+  outline: 1px solid var(--highlight-color);
 }
 
 /* Mail Button */
@@ -1041,6 +1099,19 @@ footer {
     margin-bottom: 20px;
     width: 100%;
   }
+  .carousel {
+    width: 250px;
+    height: 250px;
+    margin-top: 40px;
+  }
+
+  .carousel__btn.prev {
+  left: -88px;
+}
+
+.carousel__btn.next {
+  right: -88px;
+}
 
   .modal {
     top: 0;
