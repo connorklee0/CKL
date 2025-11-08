@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connor K. Lee</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href=".assets/CKL-logo-favicon.ico" />
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/534270c367.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "FZAxPbdlVGijglwI4",
+          });
+      })();
+    </script>
+  </head>
+  <body onmousemove="moveBackground(event)">
+    <!-- BACKGROUND SHAPES -->
+    <img src="./assets/shapes/semi circle.svg" class="shape shape--0">
+    <img src="./assets/shapes/circle.svg" class="shape shape--1">
+    <img src="./assets/shapes/squiggly.svg" class="shape shape--2">           
+    <img src="./assets/shapes/circle.svg" class="shape shape--3">
+    <img src="./assets/shapes/triangle.svg" class="shape shape--4">
+    <img src="./assets/shapes/circle.svg" class="shape shape--5">
+    <img src="./assets/shapes/squiggly.svg" class="shape shape--6">
+    <img src="./assets/shapes/circle.svg" class="shape shape--7">
+    <img src="./assets/shapes/semi circle.svg" class="shape shape--8">
+    <!-- NAV BAR + LANDING PAGE -->
+    <section id="landing" >
+      <nav>
+        <figure>
+          <img id="personal-logo" src="./assets/ckl-logo.png" draggable="false"/>
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link clickable link__hover-underline">
+            <a
+              href="#"
+              class="nav__link--anchor"
+              onclick="openAboutExpanded()"
+              >About</a
+            >
+          </li>
+          <li class="nav__link clickable link__hover-underline">
+            <a
+              href="#projects"
+              class="nav__link--anchor"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link clickable link__hover-underline">
+            <a
+              href="#"
+              class="nav__link--anchor"
+              onclick="openContactCollapsed()"
+              >Contact</a
+            >
+          </li>
+          </li>
+          <li class="nav__link clickable" onclick="toggleTheme()">
+            <button class="theme-switch"  aria-label="Toggle theme">
+              <i class="fa-solid fa-circle-half-stroke theme-switch__default"></i>
+              <i class="fa-solid fa-sun theme-switch__hover theme-switch__light"></i>
+              <i class="fa-solid fa-moon theme-switch__hover theme-switch__dark"></i>
+            </button>
+          </li>
+        </ul>
+      </nav>
+          <header class="header">
+            <div class="header__content">
+              <h1 class="title">Hello,</h1>
+              <h1 class="title highlight">I'm Connor.</h1>
+              <p class="header__para">
+                I am a <span class="highlight">Frontend Software Engineer</span> passionate about building intuitive interfaces and refining complex systems into seamless user workflows. I bring a human-centered approach to developing platforms that blend creativity, usablity, and acessibility.
+                <br>
+                Click for more <a class="header__para--link highlight clickable" onclick="openAboutExpanded()">about me.</a>
+              </p>
+                <div class="header__links">
+                  <div class="link__container clickable">
+                    <a title="LinkedIn" href="https://www.linkedin.com/in/connorklee/" class="header__link" target="_blank">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </div>          
+                  <div class="link__container clickable">
+                    <a title="GitHub" href="https://github.com/connorklee0" class="header__link" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                  <div class="link__container clickable">
+                      <a title="Resume" href="./assets/Connor K. Lee - Resume.pdf" class="header__link" target="_blank">
+                          <i class="fa-solid fa-file-lines"></i>
+                      </a>
+                  </div>
+                </div>
+              </div>
+            <figure class="header__img--wrapper">
+              <img src="./assets/me.JPG" class="header__img" draggable="false"
+            </figure>
+          </header>
+          <button class="mail__btn clickable" onclick="contactModal()">
+            <i class="fa-solid fa-envelope"></i>
+          </button>
+          <a href="#projects" class="scroll">
+            <div class="scroll__icon clickable"></div>
+          </a>
+          <div class="modal">
+            <!-- MODAL ABOUT -->
+            <div class="modal__half modal__about">
+              <i class="modal__para--resize--hidden fa-solid fa-xmark modal__exit--about clickable"  onclick="toggleModal()"></i>
+            <div class="modal__title--about--wrapper">
+                <h3 class="modal__title modal__title--about ">Connor K. Lee</h3>
+                <div class="link__container clickable">
+                    <a title="Resume" href="./assets/Connor K. Lee - Resume.pdf" class="modal__title--link" target="_blank">
+                      <i class="fa-solid fa-file-lines"></i>
+                    </a>
+                </div>
+              </div>
+              <h4 class="modal__sub-title modal__sub-title--about highlight">Frontend Software Engineer</h4>
+                <div class="modal__para--wrapper">
+                  <p class="modal__para">
+                    My journey to frontend development began at <span class="highlight">Yale</span>, where I studied <span class="highlight">cognitive science</span> with a focus on <span class="highlight">human-computer interaction (HCI) and human-robot interaction (HRI)</span>. My Serendipity project—an intuitive body-tracking interface—showed me the power of thoughtful design and how interfaces could feel natural, approachable, and even delightful. That experience sparked my passion for <span class="highlight">bridging the gap between design and development</span>, ensuring that what looks beautiful in Figma translates into seamless, functional experiences in code. I approach every project through a lens of research, prototyping, and iteration, applying <span class="highlight">HCI principles</span> to guide users naturally through interfaces while prioritizing <span class="highlight">accessibility</span> so no one is left behind.
+                    <br><br>
+                    Through software engineering internships at startups like <span class="highlight">TicTag</span> in Singapore and <span class="highlight">Affinna</span> in the US, I developed a foundation in best practices for robust development. I built responsive web pages, collaborated with backend engineers to populate data and bring features to life, and learned the importance of sprint planning, Git workflows, API optimization, and thorough documentation. At TicTag, I improved client portal pages to help customers track their projects more easily, focusing on creating interfaces that reduced friction and enhanced usability.
+                    <br><br>
+                    Beyond my technical work with <span class="highlight">React, JavaScript, HTML, and CSS</span>, I bring a problem-solving mindset shaped by real-world impact. As an <span class="highlight">Implementation Project Manager at Epic</span>, I collaborated with hospital operations and IT teams to redesign endoscopy workflows, gathering data directly from surgeons and OR nurses to identify pain points. Through iterative configuration and testing, we <span class="highlight">reduced documentation time by 30% at go-live</span>. Whether I'm optimizing surgical workflows or building a customizable guitar tuner for fellow musicians, my goal remains the same: make technology a joy, not a frustration. I thrive in collaborative environments where teams rally around a shared vision, and I'm driven by the belief that great software should help us live easier and more creative lives.
+                  </p>
+                  <figure class="modal__para-expand clickable" title="expand" onclick="expand()">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </figure>
+                  <figure class="modal__para-collapse clickable modal__para--resize--hidden" title="expand" onclick="collapse()">
+                    <i class="fa-solid fa-down-left-and-up-right-to-center"></i>
+                  </figure>
+                </div>
+              <div class="toolkit__list">
+                    <div class="tool">
+                        <figure class="tool__img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="HTML" class="tool__img">
+                        </figure>
+                        <span class="tool__name">HTML</span>
+                    </div>
+                    <div class="tool">
+                        <figure class="tool__img--wrapper">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="CSS" class="tool__img">
+                        </figure>
+                        <span class="tool__name">CSS</span>
+                    </div>
+                    <div class="tool">
+                        <figure class="tool__img--wrapper">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="JavaScript" class="tool__img">
+                        </figure>
+                        <span class="tool__name">JavaScript</span>
+                    </div>
+                    <div class="tool">
+                        <figure class="tool__img--wrapper">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/react-3-1175109.png" alt="React" class="tool__img">
+                        </figure>
+                        <span class="tool__name">React</span>
+                    </div>
+                    <div class="tool">
+                        <figure class="tool__img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="Python" class="tool__img">
+                        </figure>
+                        <span class="tool__name">Python</span>
+                    </div>
+                    <div class="tool">
+                        <figure class="tool__img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/1024px-Git_icon.svg.png" alt="GIT" class="tool__img">
+                        </figure>
+                        <span class="tool__name">GIT</span>
+                    </div>
+                    <div class="tool">
+                        <figure class="tool__img--wrapper">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="tool__img">
+                        </figure>
+                        <span class="tool__name">Figma</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL CONTACT -->
+            <div class="modal__half modal__contact">
+              <i class="fa-solid fa-xmark modal__exit--contact clickable" onclick="toggleModal()"></i>
+              <h3 class="modal__title modal__title--contact">Let's Work Together!</h3>
+              <h4 class="modal__sub-title modal__sub-title--contact">I'm open to new opportunities and collaborations.</h4>
+              <form class="contact__form" onsubmit="submitContactForm(event)">
+                <div class="form__item">
+                  <label class="form__item--label">Full Name:</label>
+                  <input type="text" class="input" name="user_name" placeholder="First Last" required>
+                </div>
+                <div class="form__item">
+                  <label class="form__item--label">E-mail:</label>
+                  <input type="email" class="input" name="user_email" placeholder="your@email.com" required>
+                </div>
+                <div class="form__item">
+                  <label class="form__item--label">Message:</label>
+                  <textarea type="text" class="input" name="message" placeholder="Write your message..." required></textarea>
+                </div>
+                <div class="contact__submit">
+                  <button id="contact__submit" class="form__submit">
+                    <span class="btn--txt">Get in Touch</span>
+                    <i class="fa-solid fa-paper-plane submit__icon"></i>
+                  </button>
+                </div>
+              </form>
+              <div class="modal__overlay modal__overlay--loading">
+                <i class="fa-solid fa-spinner"></i>
+              </div>
+              
+              <!-- SUBMIT SUCCESS -->
+                <div class="modal__overlay modal__overlay--success">
+                  Message sent &#10003
+                  <br>
+                  Looking forward to connecting!
+                </div>
+              <!-- SUBMIT FAIL -->
+                <div class="modal__overlay modal__overlay--fail">
+                  Message not sent &#9888
+                  <br>
+                  Email service is temporarily unavailable. 
+                  <br>
+                  <br>
+                  Please contact me at 
+                  <a href="mailto:connorklee@gmail.com" class="clickable email__link">connorklee@gmail.com</a>
+                </div>
+            </div>
+          </div>
+
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            My <span class="highlight">Projects</span>
+          </h1>
+           <!-- EZ-Tuner -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/projects/EZtuner.png" class="project__img alt="EZ-Tuner">
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    EZ-Tuner
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Figma, HTML, CSS, JavaScript
+                                </h4>
+                                <p class="project__description--para">
+                                    A web and mobile guitar tuner designed for effortless use and complete customization, allowing guitarists to create personal tunings with precise Hz adjustments. I designed the interface in Figma and developed it using HTML, CSS, and JavaScript, focusing on an intuitive user experience that eliminates the frustration of traditional tuners. Through usability testing with fellow guitar players, I refined the design to ensure it meets the real-world needs of musicians at any skill level.
+                                </p>
+                                <div class="project__description--links">
+                                    <div title="GitHub Repo" class="project__description--link--wrapper  link__container clickable">
+                                        <a href="" target="_blank" class="project__description--link">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <div class="project__description--link--wrapper  link__container clickable">
+                                        <a title="Website Link" href="" target="_blank" class="project__description--link">
+                                            <i class="fa-solid fa-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- SHUTTER -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/projects/Shutter.png" class="project__img alt="Shutter">
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Shutter
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Python, ROS 2
+                                </h4>
+                                <p class="project__description--para">
+                                    Shutter is an interactive robot photographer that allows users to direct photo framing using intuitive hand gestures.  By leveraging a Kinect Azure sensor for real-time skeletal tracking, users can control a robot-mounted camera's pan, tilt, and zoom through simple hand movements (pointing left, right, up, and down). The system maps hand positions to camera adjustments, enabling users to compose shots naturally. Once the desired framing is achieved, users can trigger the shutter with a thumbs up gesture. This project enhances human-robot interaction, giving users creative control over robotic photography through natural motion.
+                                </p>
+                                <div class="project__description--links">
+                                    <div class="project__description--link--wrapper link__container clickable">
+                                        <a title="GitHub Repo" href="https://github.com/connorklee0/Shutter?tab=readme-ov-file#demos" target="_blank" class="project__description--link">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <div class="project__description--link--wrapper link__container clickable">
+                                        <a title="Open Report" href="./assets/projects/Shutter_Final_Report.pdf" target="_blank" class="project__description--link">
+                                            <i class="fa-solid fa-file-lines"></i>
+                                        </a>
+                                    </div>
+                                    <div class="project__description--link--wrapper link__container clickable">
+                                        <a title="Watch Demo" href="https://drive.google.com/file/d/1gXu8in7-0NxaQ1k7760O9vnZWMf85DwU/view?usp=drive_link" target="_blank" class="project__description--link">
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- SERENDIPITY -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/projects/Serendipity.png" class="project__img alt="Serendepity">
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    Serendipity
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    HTML, CSS, JavaScript, Python, Figma
+                                </h4>
+                                <p class="project__description--para">
+                                    Serendipity was an interactive installation that invited the Yale community to anonymously share and receive positive messages. Using a Kinect Azure sensor, users navigated and opened one of three message cards through body movement. After reading a revealed message, they could exit or contribute their own by scanning a QR code linked to a Google Form. Serendipity aimed to spread positivity, uplift moods, and strengthen community connections through simple, meaningful interactions.
+                                </p>
+                                <div class="project__description--links">
+                                    <div class="project__description--link--wrapper  link__container clickable">
+                                        <a title="GitHub Repo" href="https://github.com/connorklee0/Serendepity" target="_blank" class="project__description--link">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <div class="project__description--link--wrapper  link__container clickable">
+                                        <a title="Watch Demo" href="https://drive.google.com/file/d/1h_FsH50Q-9jz-u8xu9tV8LmyATeF_h5H/view?usp=sharing" target="_blank" class="project__description--link">
+                                            <i class="fa-solid fa-play"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="row footer__row">
+            <a href="#" class="footer__anchor">
+                <figure class="footer__logo">
+                    <img src="./assets/CKL-logo.png" class="footer__logo--img" alt="Footer logo">
+                </figure>
+                <span class="footer__logo--popper">
+                    Top
+                    <i class="fa-solid fa-arrow-up"></i>
+                </span>
+            </a>
+            <ul class="footer__social--list">
+                <li class="footer__social--link link__hover-underline link__hover-underline--contrast clickable">
+                  <a href="https://www.linkedin.com/in/connorklee/" class="footer__social__link--anchor" target="_blank">
+                      LinkedIn
+                  </a>
+                </li>
+                <li class="footer__social--link link__hover-underline link__hover-underline--contrast clickable">
+                  <a href="https://github.com/connorklee0" class="footer__social__link--anchor" target="_blank">
+                      GitHub
+                  </a>
+                </li>
+                  <li class="footer__social--link link__hover-underline link__hover-underline--contrast clickable">
+                    <a href="./assets/Connor K. Lee - Resume.pdf" class="footer__social__link--anchor" target="_blank">
+                        Resume
+                    </a>
+                </li>
+                <li class="footer__social--link link__hover-underline link__hover-underline--contrast clickable">
+                  <a class="footer__social__link--anchor" onclick="openContactCollapsed()">
+                      Contact
+                  </a>
+                </li>
+              </ul>
+            <div class="footer__copyright">Copyright © 2025 Connor K. Lee</div>
+        </div>
+    </footer>
+  </body>
+</html>
