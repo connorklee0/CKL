@@ -242,7 +242,7 @@ header {
 
 .modal--open nav,
 .modal--open .scroll,
-.modal--open header,
+.modal--open .header,
 .modal--open .project,
 .modal--open .footer__row {
   opacity: 0;
@@ -1207,6 +1207,10 @@ footer {
 
 /* Small phones */
 @media (max-width: 480px) {
+  .shape {
+    display: none;
+  }
+
   .title {
     font-size: 52px;
   }
@@ -1222,4 +1226,18 @@ footer {
   .modal__half {
     padding: 40px;
   }
+
+  textarea {
+    max-height: 50px;
+  }
+  
+  .contact__submit {
+    align-items: center;
+  }
+
+
+  .footer__social__link--anchor {
+    font-size: 16px;
+  }
+
 }
