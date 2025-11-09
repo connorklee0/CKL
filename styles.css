@@ -657,16 +657,10 @@ body.dark-mode #personal-logo {
   max-height: 100%;
   font-size: 18px;
   line-height: 1.75;
-  overflow: auto;
+  overflow-y: scroll;
   overscroll-behavior: contain;
-  scrollbar-color: var(--background--secondary-color)
-    var(--background--secondary-color);
   transition: all 300ms ease;
-}
-
-.modal__para:hover,
-.modal__para:active {
-  scrollbar-color: var(--highlight-color) var(--background--secondary-color);
+  padding-right: 8px;
 }
 
 .modal__para-expand,
@@ -717,14 +711,11 @@ body.dark-mode #personal-logo {
 }
 
 .modal__title--contact {
-  color: var(--contrast-color);
-}
-
-.modal__sub-title--contact {
   color: var(--highlight-color);
 }
 
 .contact__form {
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -1056,19 +1047,19 @@ footer {
 
 .shape--0 {
   top: 15vh;
-  left: 5vw
+  left: 10vw
 }
 .shape--1 {
   top: 15vh;
-  left: 50vw
+  left: 55vw
 }
 .shape--2 {
   top: 15vh;
-  left: 80vw
+  left: 90vw
 }
 .shape--3 {
   top: 50vh;
-  left: 5vw
+  left: 10vw
 }
 .shape--4 {
   top: 50vh;
@@ -1076,19 +1067,19 @@ footer {
 }
 .shape--5 {
   top: 50vh;
-  left: 80vw
+  left: 90vw
 }
 .shape--6 {
   top: 80vh;
-  left: 5vw
+  left: 10vw
 }
 .shape--7 {
   top: 80vh;
-  left: 50vw
+  left: 55vw
 }
 .shape--8 {
   top: 80vh;
-  left: 80vw
+  left: 90vw
 }
 
 /* ========================================
@@ -1195,6 +1186,11 @@ footer {
     max-height: 100%;
   }
 
+  .modal__para {
+    padding-right: 0;
+    overflow: auto;
+  }
+
   .scroll {
     display: none;
   }
@@ -1225,6 +1221,10 @@ footer {
 
 /* Small phones */
 @media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .shape {
     display: none;
   }
@@ -1264,13 +1264,18 @@ footer {
   }
 
   textarea {
-    max-height: 50px;
+    outline: 2px solid var(--background--secondary-color);
+    outline-offset: 4px;
+    border: none;
   }
   
   .contact__submit {
-    align-items: center;
+    align-items: end;
   }
 
+  .submit__icon {
+    margin-left: 4px;
+  }
 
   .footer__social__link--anchor {
     font-size: 16px;
