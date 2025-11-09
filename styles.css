@@ -672,8 +672,8 @@ body.dark-mode #personal-logo {
 .modal__para-expand,
 .modal__para-collapse {
   position: absolute;
-  top: -4px;
-  right: -28px;
+  top: -80px;
+  right: -34px;
   color: var(--highlight-color);
 }
 
@@ -1251,6 +1251,16 @@ footer {
 
   .modal__half {
     padding: 40px;
+  }
+
+  .modal__para-expand,
+  .modal__para-collapse {
+    display: none;
+  }
+
+  .fa-xmark {
+    top: 24px;
+    right: 16px;
   }
 
   textarea {
