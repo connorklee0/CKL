@@ -191,9 +191,9 @@ button {
   cursor: pointer;
 }
 
-.clickable:hover,
-.clickable:active {
+.clickable:hover {
   scale: 1.15;
+  color: var(--highlight-color);
 }
 
 .clickable:active {
@@ -391,14 +391,15 @@ header {
 }
 
 .carousel__btn.prev {
-  left: -28px;
+  left: -32px;
 }
 
 .carousel__btn.next {
-  right: -28px;
+  right: -32px;
 }
 
-.carousel__btn:active {
+.carousel__btn:active,
+.carousel__btn:hover {
   outline: 1px solid var(--highlight-color);
 }
 
@@ -1217,6 +1218,14 @@ footer {
 
   .header__para {
     font-size: 18px;
+  }
+
+  .carousel__btn.prev {
+    left: -32px;
+  }
+
+  .carousel__btn.next {
+    right: -32px;
   }
 
   .nav__link:first-child {

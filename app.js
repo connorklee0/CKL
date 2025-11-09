@@ -28,7 +28,6 @@ buttons.forEach(button => {
             .querySelector(".carousel__images")
 
         const activeImage = images.querySelector(".active")
-        console.log(button.classList)
         let newIndex = [...images.children].indexOf(activeImage) + offset
         if (newIndex < 0) {newIndex = images.children.length - 1}
         if (newIndex >= images.children.length) {newIndex = 0}
