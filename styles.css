@@ -389,7 +389,7 @@ body.dark-mode #personal-logo {
   
 @supports (height: 100svh) {
   #landing {
-    min-height: 100vh;
+    min-height: 100svh;
   }
 }
 
@@ -411,7 +411,7 @@ body.dark-mode #personal-logo {
   
 @supports (height: 100svh) {
   .header__container {
-    min-height: 80vh;
+    min-height: 80svh;
   }
 }
 
