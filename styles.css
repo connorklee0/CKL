@@ -404,13 +404,13 @@ body.dark-mode #personal-logo {
 }
 
 @supports (height: 100dvh) {
-  header__container {
+  .header__container {
     min-height: 80dvh;
   }
 }
   
 @supports (height: 100svh) {
-  header__container {
+  .header__container {
     min-height: 80vh;
   }
 }
