@@ -5,6 +5,7 @@
    ======================================== */
 
 body,
+html,
 body.dark-mode footer {
   /* Colors - Light Mode */
   --background-color: #f5f1eb;
@@ -254,7 +255,7 @@ header {
 .modal--open nav,
 .modal--open .scroll,
 .modal--open .header,
-.modal--open .project,
+.modal--open .container,
 .modal--open .footer__row {
   opacity: 0;
   visibility: hidden;
@@ -376,6 +377,18 @@ body.dark-mode #personal-logo {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+@supports (height: 100dvh) {
+  #landing {
+    min-height: 100dvh;
+  }
+}
+  
+@supports (height: 100svh) {
+  #landing {
+    min-height: 100vh;
+  }
 }
 
 .header__container {
@@ -999,21 +1012,20 @@ footer {
 
 .footer__anchor {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 @media (hover: hover) {
   .footer__anchor:hover .footer__logo--popper {
     opacity: 1;
-    transform: translateX(88px);
+    transform: translateX(80px);
   }
 }
 
 .footer__logo--img {
-  width: 70px;
-  height: 70px;
-  background-color: var(--text--contrast-color);
-  border-radius: 30px;
+  width: 92px;
+  height: 92px;
+  filter: invert(100%);
   transform: scale(1.2);
 }
 
@@ -1025,7 +1037,6 @@ footer {
   font-weight: 700;
   opacity: 0;
   transition: all 450ms ease;
-  color: var(--text--contrast-color);
 }
 
 .footer__social--list {
@@ -1260,6 +1271,10 @@ footer {
     display: none;
   }
 
+  .mail__btn {
+    right: 24px;
+  }
+
   .modal__half {
     padding: 40px;
   }
@@ -1304,11 +1319,12 @@ footer {
 
 /* Smaller phones */
 @media (max-width: 400px) {
-  .mail__btn {
-    right: 24px;
-  }
-  #projects {
+  /* #projects {
+    padding-top: 80px;
+  } */
+
+   .container {
     position: relative;
-    margin-top: 80px;
-  }
+    padding-top: 80px;
+   }
 }
