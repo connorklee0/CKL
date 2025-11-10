@@ -525,6 +525,7 @@ body.dark-mode #personal-logo {
   color: var(--contrast-color);
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
   z-index: 100;
+  opacity: 0.85;
 }
 
 /* Scroll Indicator */
@@ -1303,6 +1304,9 @@ footer {
 
 /* Smaller phones */
 @media (max-width: 400px) {
+  .mail__btn {
+    right: 24px;
+  }
   #projects {
     position: relative;
     margin-top: 80px;
