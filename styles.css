@@ -1316,6 +1316,13 @@ footer {
 }
 
 /* Smaller phones */
+@media (max-height: 750px) {
+    .carousel {
+    max-width: 200px;
+    max-height: 200px; 
+  }
+}
+
 @media (max-width: 380px) {
   .carousel {
     max-width: 150px;
@@ -1326,3 +1333,4 @@ footer {
     font-size: 20px;
   }
 }
+
