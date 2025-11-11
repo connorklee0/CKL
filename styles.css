@@ -376,47 +376,20 @@ body.dark-mode #personal-logo {
    ======================================== */
 
 #landing {
-  min-height: 100vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
 }
 
-@supports (height: 100dvh) {
-  #landing {
-    min-height: 100dvh;
-  }
-}
-  
-@supports (height: 100svh) {
-  #landing {
-    min-height: 100svh;
-  }
-}
-
 .header__container {
   max-height: 80vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 100%;
   max-width: 1100px;
-}
-
-@supports (height: 100dvh) {
-  .header__container {
-    max-height: 80dvh;
-  }
-}
-  
-@supports (height: 100svh) {
-  .header__container {
-    max-height: 80svh;
-  }
+  margin: 0 auto;
 }
 
 .header {
-  position: relative;
+  margin: 0 auto;
   height: 100%;
   width: 100%;
   max-width: 1100px;
@@ -1139,11 +1112,9 @@ footer {
 
   .header {
     flex-direction: column;
-    /* top: 70%; */
   }
 
   .header__links {
-    margin-bottom: 20px;
     width: 100%;
   }
 
@@ -1333,8 +1304,39 @@ footer {
 
 /* Smaller phones */
 @media (max-width: 400px) {
-   .container {
-    position: relative;
-    padding-top: 80px;
+  .title {
+    font-size: 40px;
+  }
+  .header__para {
+    font-size: 16px;
+  }
+  .carousel {
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+  }
+  .carousel__btn {
+    font-size: 16px;
+  }
+  #projects {
+    padding-top: 40px;
+  }
+  
+  .project__description {
+    padding: 0 12px;
+  }
+  .project__description--title {
+    font-size: 32px;
+  }
+
+  .project__description--sub-title {
+    font-size: 18px;
+  }
+}
+
+/* Even smaller phones */
+@media (max-width: 375px) {
+  #projects {
+    padding-top: 100px;
    }
 }
