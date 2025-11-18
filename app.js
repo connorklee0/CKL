@@ -54,11 +54,9 @@ function expand() {
     
     // First, remove hidden-complete to allow transitions
     const contact = document.querySelector(".modal__contact");
-    const toolkit = document.querySelector(".toolkit__list");
     const exitContact = document.querySelector(".modal__exit--contact");
     
     if (contact) contact.classList.remove("hidden-complete");
-    if (toolkit) toolkit.classList.remove("hidden-complete");
     if (exitContact) exitContact.classList.remove("hidden-complete");
     
     // Force a reflow to ensure display change is applied
@@ -67,7 +65,6 @@ function expand() {
     // Add transition classes
     updateModalState({
         ".modal__half": { add: "modal__half--expand" },
-        ".toolkit__list": { add: "modal__para--resize--hidden" },
         ".modal__contact": { add: "modal__para--resize--hidden" },
         ".modal__para--wrapper": { add: "modal__para--expand" },
         ".modal__para-expand": { add: "modal__para--resize--hidden" },
@@ -79,7 +76,6 @@ function expand() {
     // After transition completes, add display: none
     setTimeout(() => {
         if (contact) contact.classList.add("hidden-complete");
-        if (toolkit) toolkit.classList.add("hidden-complete");
         if (exitContact) exitContact.classList.add("hidden-complete");
     }, 500);
 }
@@ -91,12 +87,10 @@ function collapse() {
     
     // First, remove hidden-complete to allow transitions
     const contact = document.querySelector(".modal__contact");
-    const toolkit = document.querySelector(".toolkit__list");
     const exitAbout = document.querySelector(".modal__exit--about");
     const exitContact = document.querySelector(".modal__exit--contact");
     
     if (contact) contact.classList.remove("hidden-complete");
-    if (toolkit) toolkit.classList.remove("hidden-complete");
     if (exitAbout) exitAbout.classList.remove("hidden-complete");
     if (exitContact) exitContact.classList.remove("hidden-complete");
     
@@ -106,7 +100,6 @@ function collapse() {
     // Remove transition classes
     updateModalState({
         ".modal__half": { remove: "modal__half--expand" },
-        ".toolkit__list": { remove: "modal__para--resize--hidden" },
         ".modal__contact": { remove: "modal__para--resize--hidden" },
         ".modal__para--wrapper": { remove: "modal__para--expand" },
         ".modal__para-expand": { remove: "modal__para--resize--hidden" },
@@ -159,12 +152,10 @@ function openAboutExpanded() {
         modalState.isExpanded = true;
         
         const contact = document.querySelector(".modal__contact");
-        const toolkit = document.querySelector(".toolkit__list");
         
         // Apply expanded classes instantly
         updateModalState({
             ".modal__half": { add: "modal__half--expand" },
-            ".toolkit__list": { add: "modal__para--resize--hidden" },
             ".modal__contact": { add: "modal__para--resize--hidden" },
             ".modal__para--wrapper": { add: "modal__para--expand" },
             ".modal__para-expand": { add: "modal__para--resize--hidden" },
@@ -175,7 +166,6 @@ function openAboutExpanded() {
         
         // Add hidden-complete immediately
         if (contact) contact.classList.add("hidden-complete");
-        if (toolkit) toolkit.classList.add("hidden-complete");
         
         // Then open the modal
         toggleModal();

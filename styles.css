@@ -105,6 +105,10 @@ label {
   font-size: 16px;
 }
 
+img {
+  z-index: 1;
+}
+
 .title {
   font-size: 100px;
   text-align: left;
@@ -130,11 +134,12 @@ label {
 section {
   background-color: var(--background-color);
   transition: all 300ms ease;
+  position: relative;
+  min-height: 100vh;
 }
 
 .container {
   padding: 52px 0;
-  position: relative;
 }
 
 .row {
@@ -840,7 +845,7 @@ body.dark-mode #personal-logo {
   position: relative;
   display: flex;
   justify-content: center;
-  width: calc(100% / 3);
+  width: calc(100% / 4);
 }
 
 .tool__img--wrapper {
@@ -1059,6 +1064,7 @@ footer {
 .shape {
   position: fixed;
   opacity: 50%;
+  z-index: 1;
 }
 
 .shape--0 {
@@ -1211,6 +1217,10 @@ footer {
   .modal__para {
     padding-right: 0;
     overflow: auto;
+  }
+
+  #toolkit {
+    min-height: auto;
   }
 
   .project__description--para {
