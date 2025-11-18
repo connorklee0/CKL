@@ -134,6 +134,7 @@ section {
 
 .container {
   padding: 52px 0;
+  position: relative;
 }
 
 .row {
@@ -289,7 +290,6 @@ nav,
 .fa-spinner {
   animation: spinner 750ms infinite linear;
 }
-
 
 /* ========================================
    NAVIGATION
@@ -451,13 +451,13 @@ body.dark-mode #personal-logo {
 .carousel__images {
   margin: 0;
   padding: 0;
-  list-style: none;  
+  list-style: none;
 }
 
 .carousel__img {
   position: absolute;
   inset: 0;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 500ms ease-in-out 200ms;
 }
 
@@ -471,7 +471,7 @@ body.dark-mode #personal-logo {
   border-radius: 50px;
   box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.5);
   object-fit: cover;
-  object-position: center;  
+  object-position: center;
   width: 100%;
   height: 100%;
 }
@@ -657,7 +657,7 @@ body.dark-mode #personal-logo {
 
 .modal__para--wrapper {
   position: relative;
-  max-height: 50%;
+  max-height: 80%;
   margin-bottom: 12px;
   transition: all 500ms ease;
 }
@@ -818,17 +818,21 @@ body.dark-mode #personal-logo {
 }
 
 /* ========================================
-   MODAL - TOOLKIT
+   TOOLKIT
    ======================================== */
+
+#toolkit {
+  background-color: var(--background--secondary-color);
+}
 
 .toolkit__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  max-width: 400px;
+  max-width: 1200px;
   max-height: 40%;
-  margin: 0 auto;
+  margin: 40px auto;
   transition: all 500ms ease;
 }
 
@@ -836,19 +840,19 @@ body.dark-mode #personal-logo {
   position: relative;
   display: flex;
   justify-content: center;
-  width: calc(100% / 4);
+  width: calc(100% / 3);
 }
 
 .tool__img--wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 12px;
+  padding: 28px 12px;
 }
 
 .tool__img {
   width: 100%;
-  max-width: 40px;
+  max-width: 120px;
   transition: all 300ms ease;
 }
 
@@ -863,10 +867,11 @@ body.dark-mode #personal-logo {
 .tool__name {
   position: absolute;
   bottom: 0;
-  font-size: 12px;
+  font-size: 20px;
   opacity: 0;
   transform: scale(0);
   transition: all 300ms ease;
+  color: var(--text--main-color);
 }
 
 .tool:hover .tool__name {
@@ -1058,39 +1063,39 @@ footer {
 
 .shape--0 {
   top: 15vh;
-  left: 10vw
+  left: 10vw;
 }
 .shape--1 {
   top: 15vh;
-  left: 55vw
+  left: 55vw;
 }
 .shape--2 {
   top: 15vh;
-  left: 90vw
+  left: 90vw;
 }
 .shape--3 {
   top: 50vh;
-  left: 10vw
+  left: 10vw;
 }
 .shape--4 {
   top: 50vh;
-  left: 50vw
+  left: 50vw;
 }
 .shape--5 {
   top: 50vh;
-  left: 90vw
+  left: 90vw;
 }
 .shape--6 {
   top: 80vh;
-  left: 10vw
+  left: 10vw;
 }
 .shape--7 {
   top: 80vh;
-  left: 55vw
+  left: 55vw;
 }
 .shape--8 {
   top: 80vh;
-  left: 90vw
+  left: 90vw;
 }
 
 /* ========================================
@@ -1131,7 +1136,7 @@ footer {
   }
 
   .carousel__btn.prev {
-  left: -60px;
+    left: -60px;
   }
 
   .carousel__btn.next {
@@ -1290,7 +1295,7 @@ footer {
     outline-offset: 4px;
     border: none;
   }
-  
+
   .contact__submit {
     align-items: end;
   }
@@ -1317,20 +1322,19 @@ footer {
 
 /* Smaller phones */
 @media (max-height: 750px) {
-    .carousel {
+  .carousel {
     max-width: 200px;
-    max-height: 200px; 
+    max-height: 200px;
   }
 }
 
 @media (max-width: 380px) {
   .carousel {
     max-width: 150px;
-    max-height: 150px; 
+    max-height: 150px;
   }
 
   .carousel__btn {
     font-size: 20px;
   }
 }
-
