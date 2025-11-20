@@ -981,7 +981,7 @@ body.dark-mode #personal-logo {
 }
 
 .project__description--link--wrapper {
-  margin-right: 12px;
+  margin: 0 12px;
 }
 
 .project__description--link--wrapper:last-child {
