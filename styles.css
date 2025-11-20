@@ -965,7 +965,8 @@ body.dark-mode #personal-logo {
 .project__description--title,
 .project__description--sub-title,
 .project__description--para,
-.project__description--link {
+.project__description--link,
+.project__desciption--links--para {
   text-align: left;
   color: var(--text--contrast-color);
 }
