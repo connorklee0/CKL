@@ -939,7 +939,7 @@ body.dark-mode #personal-logo {
   position: absolute;
   top: 50%;
   left: 90px;
-  max-width: 550px;
+  max-width: 800px;
   opacity: 0;
   transform: translateY(100%);
   transition: opacity 300ms, transform 450ms ease;
