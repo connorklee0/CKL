@@ -88,7 +88,7 @@
               <h1 class="title">Hello,</h1>
               <h1 class="title highlight">I'm Connor.</h1>
               <p class="header__para">
-                I am a <span class="highlight">Software Engineer</span> passionate about building intuitive interfaces and refining complex systems into seamless user workflows. I bring a human-centered approach to developing platforms that blend creativity, usablity, and acessibility.
+                   I am a <span class="highlight">Software Engineer</span>, <span class="highlight">Interactive Designer</span>, and a <span class="highlight">Maker</span>. I build intuitive interfaces, mod vintage watches, craft things in the woodshop, and tinker with electronics. Whether digital or physical, I bring the same human-centered approach to everything I make.
                 <br>
                 Click for more <a class="header__para--link highlight clickable" onclick="openAboutExpanded()">about me.</a>
               </p>
@@ -170,10 +170,10 @@
                     </a>
                 </div>
               </div>
-              <h4 class="modal__sub-title modal__sub-title--about highlight">Frontend Software Engineer</h4>
+              <h4 class="modal__sub-title modal__sub-title--about highlight">Software Engineer, Interaction Designer, Maker</h4>
                 <div class="modal__para--wrapper">
                   <p class="modal__para">
-                    My journey to frontend development began at <span class="highlight">Yale</span>, where I studied <span class="highlight">cognitive science</span> with a focus on <span class="highlight">human-computer interaction (HCI) and human-robot interaction (HRI)</span>. My Serendipity project—an intuitive body-tracking interface—showed me the power of thoughtful design and how interfaces could feel natural, approachable, and even delightful. That experience sparked my passion for <span class="highlight">bridging the gap between design and development</span>, ensuring that what looks beautiful in Figma translates into seamless, functional experiences in code. I approach projects through a lens of research, prototyping, and iteration, applying <span class="highlight">HCI principles</span> to guide users naturally through interfaces while prioritizing <span class="highlight">accessibility</span> so no one is left behind.
+                    My journey began at <span class="highlight">Yale</span>, where I studied <span class="highlight">cognitive science</span> with a focus on <span class="highlight">human-computer interaction (HCI) and human-robot interaction (HRI)</span>. My Serendipity project—an intuitive body-tracking interface—showed me the power of thoughtful design and how interfaces could feel natural, approachable, and even delightful. That experience sparked my passion for <span class="highlight">bridging the gap between design and development</span>, ensuring that what looks beautiful in Figma translates into seamless, functional experiences in code. I approach projects through a lens of research, prototyping, and iteration, applying <span class="highlight">HCI principles</span> to guide users naturally through interfaces while prioritizing <span class="highlight">accessibility</span> so no one is left behind.
                     <br><br>
                     Through software engineering internships at startups like <span class="highlight">TicTag</span> in Singapore and <span class="highlight">Affinna</span> in the US, I developed a foundation in best practices for robust development. I built responsive web pages, collaborated with backend engineers to populate website data and bring features to life, and learned the importance of sprint planning, Git workflows, API optimization, and thorough documentation. At TicTag, I improved client portal pages to help customers track their projects more easily, focusing on creating interfaces that reduced friction and enhanced usability.
                     <br><br>
@@ -322,10 +322,47 @@
             My <span class="highlight">Projects</span>
           </h1>
           <ul class="projects__list">
+            <!-- EZ-Tuner -->
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/projects/eztuner.png" class="project__img alt="EZ-Tuner">
+                            <div class="project__description">
+                                <h3 class="project__description--title">
+                                    EZ-Tuner
+                                </h3>
+                                <h4 class="project__description--sub-title">
+                                    Next.js, Tailwind, Redux, Figma
+                                </h4>
+                                <p class="project__description--para">
+                                    A real-time web-based guitar tuner built with Next.js, TailwindCSS, and Redux Toolkit. I began the project by designing the full UI in Figma, establishing a cohesive component system, color palette, and layout before writing a single line of code. I then architected the full application from scratch, including microphone-based pitch detection, a dynamic tuning system, and an interactive headstock UI. The app leverages the Pitchy MIT package, an auto-correlation pitch detection library, to analyze live microphone input and calculate the frequency of the note being played, comparing it against a library of 20+ tunings spanning standard, drop, open, modal, and specialty configurations. I built a Redux-persisted state system to manage selected tuning, string, and guitar style across sessions, and implemented the Web Audio API to play reference tones for each string. The UI features collapsible cards, transitions, and a real-time tuner bar with a floating indicator that displays Hz deviation and celebrates in-tune notes with a chime sound and green glow animation. Keyboard navigation allows users to cycle through strings using arrow keys, and the microphone is intelligently muted during reference tone playback to prevent feedback interference.
+                                </p>
+                                <div class="project__description--links">
+                                  <p class="project__desciption--links--para">Links: </p>
+                                    <div title="GitHub Repo" class="project__description--link--wrapper  link__container clickable">
+                                        <a href="https://github.com/connorklee0/ez-tuner" target="_blank" class="project__description--link">
+                                            <i class="fa-brands fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <div class="project__description--link--wrapper  link__container clickable">
+                                        <a title="Website Link" href="https://ez-tuner.vercel.app/" target="_blank" class="project__description--link">
+                                            <i class="fa-solid fa-link"></i>
+                                        </a>
+                                    </div>
+                                    <div class="project__description--link--wrapper  link__container clickable">
+                                        <a title="Figma Design" href="https://www.figma.com/design/QYxKq24lGciXD6Kw28oN9P/EZtuner?node-id=100-1121&t=YdETG2E8S9qUMUwb-1" target="_blank" class="project__description--link">
+                                            <i class="fa-brands fa-figma"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+
            <!-- SKINTRIC -->
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./assets/projects/skinstric.png" class="project__img alt="EZ-Tuner">
+                            <img src="./assets/projects/skinstric.png" class="project__img alt="Skinstric">
                             <div class="project__description">
                                 <h3 class="project__description--title">
                                     SKINTRIC
@@ -356,7 +393,7 @@
            <!-- Summarist -->
                     <li class="project">
                         <div class="project__wrapper">
-                            <img src="./assets/projects/summarist.png" class="project__img alt="EZ-Tuner">
+                            <img src="./assets/projects/summarist.png" class="project__img alt="Summarist">
                             <div class="project__description">
                                 <h3 class="project__description--title">
                                     Summarist
